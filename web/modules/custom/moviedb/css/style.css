@@ -1,0 +1,78 @@
+
+.modal-body img{
+  width:200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.supercomment {
+	border-left: 3px solid #5C5C5C;
+	transition: all .1s ease;
+	padding: 10px;
+  background-color: #FFFAFA;
+	margin-bottom: 20px;
+}
+.supercomment:hover {
+  border-left: 3px solid dodgerblue;
+	background-color: #E8E8E8;
+  transform: scale(1.001);
+  padding-left: 30px;
+}
+.modal-body {
+  text-transform: capitalize;
+}
+.glyphicon-star {
+	 font-size: 18px;
+	 color: #e67e22;
+}
+ .glyphicon-star.half {
+	 position: relative;
+}
+ .glyphicon-star.half:before {
+	 position: relative;
+	 z-index: 9;
+	 width: 47%;
+	 display: block;
+	 overflow: hidden;
+}
+ .glyphicon-star.half:after {
+	 content: "\e006";
+	 position: absolute;
+	 z-index: 8;
+	 color: #bdc3c7;
+	 top: 0;
+	 left: 0;
+}
+
+tr,img{
+  transition: all .2s ease;
+}
+.table tr:hover{
+color: white;
+background-color: rgba(0,0,0,0.7);
+
+}
+.table tr:hover a{
+  color: #ff5b5b;
+}
+.table tr:hover img {
+  transform: scale(1.02);
+}
+.pagination {
+  display: inline-block;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination a.active {
+  background-color: #ea2d49;
+  color: white;
+  border-radius: 5px;
+}
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}

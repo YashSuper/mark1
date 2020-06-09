@@ -1,0 +1,40 @@
+moviedb.list:
+  path: '/moviedb/list'
+  defaults:
+    _controller: '\Drupal\moviedb\Controller\Movie::list'
+    _title: 'movies database'
+  requirements:
+    _permission: 'access content'
+
+moviedb.actors:
+  path: '/moviedb/actors'
+  defaults:
+    _controller: '\Drupal\moviedb\Controller\Movie::getActors'
+    _title: 'List of all actors'
+  requirements:
+    _permission: 'access content'
+
+moviedb.actor:
+  path: '/moviedb/{node}'
+  defaults:
+    _controller: '\Drupal\moviedb\Controller\Movie::actorMovie'
+    _title: 'actors list with their recent movies'
+  requirements:
+    _permission: 'access content'
+
+moviedb.costar:
+  path: '/moviedb/costar/{movie}/{nid}'
+  defaults:
+    _controller: '\Drupal\moviedb\Controller\Movie::costar'
+    _title: 'Co stars of the actor '
+  requirements:
+    _permission: 'access content'
+moviedb.admin_settings:
+  path: '/admin/config/moviedb/adminsettings'
+  defaults:
+    _form: '\Drupal\moviedb\Form\TestForm'
+    _title: 'formtest configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

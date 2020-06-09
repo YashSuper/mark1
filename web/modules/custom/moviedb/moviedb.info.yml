@@ -1,0 +1,6 @@
+name: MovieDB
+type: module
+description: 'This is Yash Bharadwaj module.'
+package: Custom
+core: 8.x
+configure: moviedb.admin_settings

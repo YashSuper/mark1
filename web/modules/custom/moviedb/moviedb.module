@@ -1,0 +1,34 @@
+<?php
+use \Symfony\Component\HttpFoundation\RedirectResponse;
+
+function moviedb_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'moviedb/moviedb_css';
+}
+
+// function moviedb_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+//   $response = new RedirectResponse("/");
+//   $response->send();
+//   kint($entity);
+//
+// }
+
+function moviedb_theme($existing, $type, $theme, $path) {
+  return array(
+    'article_list' => array(
+      'variables' => array('items' => array(), 'form' => '', 'title' => '', 'pager' => array())
+    ),
+    'actormovie_list' => array(
+      'variables' => array('items' => array(), 'title' => '')
+    ),
+    'actors_list' => array(
+      'variables' => array('items' => array(), 'title' => '')
+    ),
+    'link_block' => array(
+      'variables' => array('loginlink' => '', 'registerlink' => ''),
+    ),
+    'home_block' => array(
+      'variables' => array('items' => array(), 'title' => '')
+    )
+  );
+}
+?>
